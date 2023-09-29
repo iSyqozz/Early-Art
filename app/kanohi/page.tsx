@@ -24,7 +24,7 @@ const Home = () => {
             className='aspect-auto min-[1265px]:mt-6'></Image>
         </div>
 
-        <div className='relative w-[800px] min-[1265px]:-mt-24 max-sm:ml-12'>
+        <div className='relative w-[800px] min-[1265px]:-mt-24'>
           <Image
             quality={100}
             priority={true}
