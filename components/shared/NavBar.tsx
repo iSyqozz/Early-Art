@@ -39,11 +39,11 @@ const NavBar = () => {
 
 
       {/**small screen */}
-      <div className="text-sm sm:hidden py-16 px-2 max-w-6xl mx-auto flex justify-around items-center relative">
+      <div className="text-sm sm:hidden py-16 max-w-6xl mx-auto flex justify-between items-center relative">
 
 
         <Link
-          className="font-bold relative after:absolute after:content-[''] after:h-[2.5px] after:bottom-[-3px] after:rounded-2xl after:w-0 after:left-0 hover:after:w-[75%] after:mt-[5px] after:bg-gradient-to-bl after:from-purple-400  after:via-indigo-400 after:to-indigo-800 after:hover:bg-indigo-600 
+          className="ml-4 font-bold relative after:absolute after:content-[''] after:h-[2.5px] after:bottom-[-3px] after:rounded-2xl after:w-0 after:left-0 hover:after:w-[75%] after:mt-[5px] after:bg-gradient-to-bl after:from-purple-400  after:via-indigo-400 after:to-indigo-800 after:hover:bg-indigo-600 
           after:transition-all after:duration-200 after:ease-in
           transition-all duration-200 ease-in hover:scale-105"
           href={'/kanohi'}>
@@ -62,7 +62,7 @@ const NavBar = () => {
         </Link>
 
         <Link
-          className="font-bold relative after:absolute after:content-[''] after:h-[2.5px] after:bottom-[-3px] after:rounded-2xl after:w-0 after:left-0 hover:after:w-[75%] after:mt-[5px] after:bg-gradient-to-bl after:from-purple-400  after:via-indigo-400 after:to-indigo-800 after:hover:bg-indigo-600 
+          className="mr-4 font-bold relative after:absolute after:content-[''] after:h-[2.5px] after:bottom-[-3px] after:rounded-2xl after:w-0 after:left-0 hover:after:w-[75%] after:mt-[5px] after:bg-gradient-to-bl after:from-purple-400  after:via-indigo-400 after:to-indigo-800 after:hover:bg-indigo-600 
           after:transition-all after:duration-200 after:ease-in
           transition-all duration-200 ease-in hover:scale-105"
           href={'/banner-tool'}>
