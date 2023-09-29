@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useCallback } from 'react'
 import Image from 'next/image'
 
 import { layerGroup, layerGroups, shouldScale } from '@/constants'
@@ -30,15 +30,13 @@ const Home = () => {
   const [reseting, setReseting] = useState(false);
   const [saving, setSaving] = useState(false);
 
-
-  //different font size displays for small and big devices
-  useEffect(() => {
+  const resizeHandler = useCallback(() => {
     const screenX = window.innerWidth;
-    console.log(FontSize * (screenX / 1500))
     document.documentElement.style.setProperty('--curr-font', FontSize + 'px');
     document.documentElement.style.setProperty('--curr-small-font', (FontSize * (screenX / 1000)) + 'px');
     document.documentElement.style.setProperty('--curr-big-font', (FontSize * 2) + 'px');
-  }, [FontSize]);
+    console.log('hi')
+  }, [])
 
   //set page title
   useEffect(() => {
@@ -47,9 +45,26 @@ const Home = () => {
     setTimeout(() => {
       setSaving(false);
     }, 3000);
-  }, [])
 
-  
+    window.addEventListener('resize', resizeHandler);
+
+    return () => {
+      window.removeEventListener('resize', resizeHandler);
+    }
+  }, [resizeHandler])
+
+
+  //different font size displays for small and big devices
+  useEffect(() => {
+    const screenX = window.innerWidth;
+    document.documentElement.style.setProperty('--curr-font', FontSize + 'px');
+    document.documentElement.style.setProperty('--curr-small-font', (FontSize * (screenX / 1000)) + 'px');
+    document.documentElement.style.setProperty('--curr-big-font', (FontSize * 2) + 'px');
+
+  }, [FontSize, resizeHandler]);
+
+
+
   // Function to handle attribute image click
   function handleAttributeClick(layerGroup: layerGroup, attribute: string) {
     switch (layerGroup.name) {
@@ -157,7 +172,7 @@ const Home = () => {
   function captureAndSaveBanner() {
     const hiddenBanner = document.querySelector('.hidden-banner') as HTMLDivElement; // Replace with the actual class or ID of your hidden banner container
     hiddenBanner.style.display = 'flex';
-    window.scrollTo(0,0);
+    window.scrollTo(0, 0);
     document.body.style.overflowY = 'hidden'
 
     if (hiddenBanner) {
@@ -167,7 +182,7 @@ const Home = () => {
         downloadLink.href = image;
         downloadLink.download = 'banner.png';
         downloadLink.click();
-        
+
         hiddenBanner.style.display = 'none'
         document.body.style.overflowY = 'auto'
 
@@ -249,7 +264,7 @@ const Home = () => {
 
 
               {/** banner text */}
-              <div className='sm:[font-size:var(--curr-font)] max-sm:[font-size:var(--curr-small-font)] absolute z-[4] w-[50%] h-full right-0 mr-[5%] flex items-center justify-center'
+              <div className='sm:[font-size:var(--curr-font)] max-sm:[font-size:var(--curr-small-font)] absolute z-[4] w-[57%] h-full right-[5%] mr-[4%] flex items-center justify-center'
               >
                 <p
                   className=' duration-75 break-words w-full text-center text-yellow-50 road-rage mt-[5%]'
@@ -388,14 +403,14 @@ const Home = () => {
               <div className='p-2 flex flex-col justify-start items-center gap-2 overflow-y-auto h-full' key={entry.name}>
                 {entry.layers.map((layer, _) => (
                   <div key={layer}>
-                    <Image 
-                    className={
-                      (entry.name !== 'Backgrounds' ? (' transition-all aspect-auto rounded-full ') : (' aspect-square rounded-xl '))
-                      + ' w-[60px] aspect-auto active:scale-90 hover:scale-[1.08] duration-75 cursor-pointer rounded-full hover:bg-slate-400 hover:bg-opacity-20 '}
+                    <Image
+                      className={
+                        (entry.name !== 'Backgrounds' ? (' transition-all aspect-auto rounded-full ') : (' aspect-square rounded-xl '))
+                        + ' w-[60px] aspect-auto active:scale-90 hover:scale-[1.08] duration-75 cursor-pointer rounded-full hover:bg-slate-400 hover:bg-opacity-20 '}
                       style={{
                         boxShadow: getCurrentStateValue(entry.name) === layer ? ('0px 0px 8px 1px rgb(107, 3, 107)') : 'none',
                         background: getCurrentStateValue(entry.name) === layer ? ('rgba(100, 100, 100, 0.295)') : 'none',
-                        padding: shouldScale.has(layer)?('1.20rem 0'):('0')
+                        padding: shouldScale.has(layer) ? ('1.20rem 0') : ('0')
                       }}
                       loading='eager'
                       width={60}
@@ -537,7 +552,7 @@ const Home = () => {
                 type="range"
                 id="textSize"
                 min={25}
-                max={60}
+                max={78}
                 value={FontSize}
                 onChange={
                   (e: React.ChangeEvent<HTMLInputElement>) => {
