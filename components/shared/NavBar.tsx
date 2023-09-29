@@ -5,7 +5,6 @@ import Image from "next/image"
 
 const NavBar = () => {
   return (
-
     <>
       {/**big screen */}
       <div className="max-sm:hidden p-16 max-w-full mx-auto flex justify-between items-center">
@@ -40,7 +39,9 @@ const NavBar = () => {
 
 
       {/**small screen */}
-      <div className="text-sm sm:hidden py-16 px-2 max-w-6xl mx-auto flex justify-around items-center">
+      <div className="text-sm sm:hidden py-16 px-2 max-w-6xl mx-auto flex justify-around items-center relative">
+
+
         <Link
           className="font-bold relative after:absolute after:content-[''] after:h-[2.5px] after:bottom-[-3px] after:rounded-2xl after:w-0 after:left-0 hover:after:w-[75%] after:mt-[5px] after:bg-gradient-to-bl after:from-purple-400  after:via-indigo-400 after:to-indigo-800 after:hover:bg-indigo-600 
           after:transition-all after:duration-200 after:ease-in
@@ -50,7 +51,7 @@ const NavBar = () => {
         </Link>
 
         <Link href={'/'}>
-          <Image className="max-sm:!w-[60px] !w-[80px] aspect-auto hover:scale-[1.07] duration-[0.1s]  "
+          <Image className="transition-none absolute left-[50%] translate-x-[-50%] top-[50%] translate-y-[-50%] max-sm:!w-[60px] !w-[80px] aspect-auto hover:scale-[1.07] duration-[0.1s]  "
             width={120}
             height={120}
             alt="logo"
@@ -59,7 +60,7 @@ const NavBar = () => {
             quality={100}
           ></Image>
         </Link>
-        
+
         <Link
           className="font-bold relative after:absolute after:content-[''] after:h-[2.5px] after:bottom-[-3px] after:rounded-2xl after:w-0 after:left-0 hover:after:w-[75%] after:mt-[5px] after:bg-gradient-to-bl after:from-purple-400  after:via-indigo-400 after:to-indigo-800 after:hover:bg-indigo-600 
           after:transition-all after:duration-200 after:ease-in
@@ -68,6 +69,8 @@ const NavBar = () => {
           Banner Tool
         </Link>
       </div>
+
+
 
     </>
 

@@ -9,8 +9,8 @@ export const metadata:Metadata = {
 
 const Home = () => {
   return (
-    <div className='sm:mt-12 mt-2 max-w-full mx-auto'>
-      <section className='sm:px-8 flex items-start justify-center flex-wrap w-full max-md:gap-8'>
+    <div className='sm:mt-12 pt-2 max-w-full mx-auto relative'>
+      <section className='sm:px-8 flex items-start justify-center flex-wrap w-full max-md:gap-8 relative'>
         <div className='max-[1265px]:text-center max-[1265px]:items-center flex flex-col items-start justify-start gap-4'>
           <div className='text-4xl sm:text-5xl md:text-6xl font-semi-bold'>NFT Artist and <br /> Graphic Designer <br /> Vibing in Web3</div>
           <div className='text-sm max-sm:text-[12px] font-semibold mt-6 opacity-80'>
@@ -28,8 +28,7 @@ const Home = () => {
             height={300}
             alt='designs'
             src={'/assets/groupDisplay2.png'}
-            className='aspect-auto'></Image>
-
+            className='aspect-auto min-[1265px]:mt-6'></Image>
         </div>
 
         <div className='relative w-[800px] '>

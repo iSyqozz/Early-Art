@@ -4,8 +4,8 @@ import Image from "next/image"
 const Footer = () => {
   return (
 
-    <div className="fixed top-[95%] flex items-center justify-center w-full">
-      <div className=" backdrop-blur-lg flex gap-8 justify-center items-center px-6 py-[6px] absolute rounded-3xl bg-opacity-20 transition-none
+    <div className="h-fit fixed top-[93%] flex items-center justify-center w-screen">
+      <div className=" backdrop-blur-lg flex gap-8 justify-center items-center px-6 py-[6px] rounded-3xl bg-opacity-20 transition-none
       bg-black
     ">
         <Link href={DISCORD_URL} target='_blank' className="

@@ -9,7 +9,6 @@ const Home = () => {
   return (
     <div className='sm:mt-12 mt-2 max-w-full mx-auto'>
       <section className='sm:px-8 flex flex-row-reverse items-start justify-center flex-wrap w-full max-md:gap-8'>
-
         <div className='max-[1265px]:text-center max-[1265px]:items-center flex flex-col items-start justify-start gap-4'>
           <div className='text-4xl sm:text-5xl md:text-6xl font-semi-bold'>Spooky Vibes <br /> for $5</div>
           <div className='text-sm max-sm:text-[12px] font-semibold mt-6 opacity-80'>

@@ -49,7 +49,7 @@ const Home = () => {
     }, 3000);
   }, [])
 
-
+  
   // Function to handle attribute image click
   function handleAttributeClick(layerGroup: layerGroup, attribute: string) {
     switch (layerGroup.name) {
