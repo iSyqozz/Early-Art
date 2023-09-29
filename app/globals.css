@@ -2,26 +2,98 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+:root{
+  --curr-font: 25px;
+  --curr-small-font:12px
+  --curr-big-font:50px
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+@font-face {
+  font-family: Gilgan;
+  src: url('/fonts/Gilgan.otf');
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+@font-face {
+  font-family: RoadRage;
+  src: url('/fonts/Road_Rage.otf');
+}
+
+
+html{
+  scroll-behavior: smooth;
+  position: relative;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  transition: all .25s ease-in-out;
+}
+
+body{
+  font-family: Gilgan;
+  overflow-x: hidden;
+  position: relative;
+  background-image: url('/assets/bg1.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+
+*::-webkit-scrollbar {
+  width: 8px; /* Width of the scrollbar */
+}
+
+*::-webkit-scrollbar-track {
+  background: #8c7e89; /* Track color (black) */
+  border-radius: 4px;
+}
+
+*::-webkit-scrollbar-thumb {
+  background: #cecece; /* Thumb color */
+  border-radius: 4px; /* Rounded corners for the thumb */
+  transition: background 0.2s, transform 0.2s; /* Smooth transitions for background and transform */
+}
+
+/* Customize the scrollbar thumb on hover */
+*::-webkit-scrollbar-thumb:hover {
+  background: whitesmoke; /* Thumb color on hover (white) */
+  transform: scale(1.1); /* Scale the thumb slightly on hover */
+}
+
+.text-slider::-webkit-slider-thumb{
+  -webkit-appearance: none;
+  width: 16px;
+  height: 22px;
+  border-radius: 40%;
+  background-color: rgb(254 252 232);;
+  transition: all 0.2s ease-in-out;
+
+}
+
+.text-slider::-webkit-slider-thumb:hover{
+  box-shadow: 0px 0px 10px 2px rgb(107, 3, 107);
+  transform: scale(1.25);
+}
+
+.text-slider::-webkit-slider-thumb:active{
+  transform: scale(1.15);
+}
+
+.road-rage{
+  font-family: RoadRage;
+}
+
+.export{
+  background: linear-gradient(to right, #390c4d, #811880, #4e299a, #7363bc, #b14ebb);
+  transition: all 0.3s ease-in-out
+}
+
+.export:hover{
+  box-shadow: 0px 0px 10px 2px rgb(107, 3, 107);
+}
+.export:active{
+  transform: scale(0.95);
+  transition: all 0.2s ease-in-out
 }
