@@ -43,6 +43,10 @@ const Home = () => {
   //set page title
   useEffect(() => {
     document.title = 'Early | Banner Tool'
+    setSaving(true);
+    setTimeout(() => {
+      setSaving(false);
+    }, 3000);
   }, [])
 
 
