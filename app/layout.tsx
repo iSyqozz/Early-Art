@@ -12,28 +12,28 @@ export const metadata: Metadata = {
   description: 'NFT Artists and Graphic Designers Vibing in Web3.',
   viewport: { width: "device-width", initialScale: 1 },
   metadataBase: new URL(baseUrl),
-  keywords: "Easy, Artist, Web3, Designer, Hidden Kanohi, Kanohi, fiveDollarNFT ",
+  keywords: "Early, Artist, Web3, Designer, Hidden Kanohi, Kanohi, fiveDollarNFT ",
   creator: 'iSy',
   publisher: 'iSy',
   generator: 'Next.js',
-  applicationName: 'Easy',
+  applicationName: 'Early',
   authors: [
     {
       name: 'iSy',
       url: 'https://linktr.ee/isyqozz512'
     },
     {
-      name: 'Easy',
+      name: 'Early',
       url: 'https://lynkfire.com/Early'
     }
   ],
   openGraph: {
-    title: 'Easy',
+    title: 'Early',
     description: 'NFT Artists and Graphic Designers Vibing in Web3.',
-    siteName: 'Easy',
+    siteName: 'Early',
   },
   twitter: {
-    title: 'Easy',
+    title: 'Early',
     description: 'NFT Artists and Graphic Designers Vibing in Web3.',
     card: 'summary',
     creator: '@iSyqozz512',
