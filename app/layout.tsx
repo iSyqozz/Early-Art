@@ -9,7 +9,7 @@ const baseUrl = process.env.NODE_ENV === 'development'
 
 export const metadata: Metadata = {
   title: 'Early',
-  description: 'NFT Artists and Graphic Designers Vibing in Web3.',
+  description: 'NFT Artist and Graphic Designer Vibing in Web3.',
   viewport: { width: "device-width", initialScale: 1 },
   metadataBase: new URL(baseUrl),
   keywords: "Early, Artist, Web3, Designer, Hidden Kanohi, Kanohi, fiveDollarNFT ",
@@ -29,12 +29,12 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     title: 'Early',
-    description: 'NFT Artists and Graphic Designers Vibing in Web3.',
+    description: 'NFT Artist and Graphic Designer Vibing in Web3.',
     siteName: 'Early',
   },
   twitter: {
     title: 'Early',
-    description: 'NFT Artists and Graphic Designers Vibing in Web3.',
+    description: 'NFT Artist and Graphic Designer Vibing in Web3.',
     card: 'summary',
     creator: '@iSyqozz512',
     site: '@EarlyArt_SO'

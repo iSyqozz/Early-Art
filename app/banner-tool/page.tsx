@@ -2,6 +2,8 @@
 
 import { useState, useEffect, useCallback } from 'react'
 import Image from 'next/image'
+import Link from 'next/link'
+import { TWITTER_URL } from '@/constants'
 
 import { layerGroup, layerGroups, shouldScale } from '@/constants'
 import { Tooltip } from 'react-tooltip'
@@ -208,6 +210,15 @@ const Home = () => {
             <li className='' >Adjust the size</li>
             <li className='' >Export and save</li>
           </ul>
+
+
+          <Link
+            target='_blank'
+            href={TWITTER_URL}
+            className='max-sm:hidden  mt-6 px-2 export cursor-pointer max-w-full h-10 rounded-2xl text-yellow-50 text-opacity-80 items-center flex justify-center text-center'
+          >
+            <p>Get this tool for your community</p>
+          </Link>
         </div>
 
 
@@ -569,7 +580,7 @@ const Home = () => {
 
           {/**save banner section */}
           <div
-            className='mt-3 mb-24 mx-2 export cursor-pointer w-[98%] max-sm:w-[95vw] h-10 rounded-xl text-yellow-50 text-opacity-80 items-center flex justify-center text-center'
+            className='mt-3 sm:mb-24 mx-2 export cursor-pointer w-[98%] max-sm:w-[95vw] h-10 rounded-xl text-yellow-50 text-opacity-80 items-center flex justify-center text-center'
             onClick={() => {
               if (!loaderVis) {
                 setSaving(true)
@@ -581,6 +592,14 @@ const Home = () => {
           >
             <p>Export and Save</p>
           </div>
+
+          <Link
+            target='_blank'
+            href={TWITTER_URL}
+            className='sm:hidden mt-3 mb-24 export cursor-pointer w-[98%] max-sm:w-[95vw] h-10 rounded-xl text-yellow-50 text-opacity-80 items-center flex justify-center text-center'
+          >
+            <p>Get this tool for your community</p>
+          </Link>
         </div>
 
         {/**Hidden Canvas */}
@@ -716,24 +735,26 @@ const Home = () => {
           </div>
         </div>
 
-      </section>
+      </section >
       <Tooltip className='z-10' id="my-tooltip" />
 
-      {saving && (
-        <div className='z-30 flex items-center justify-center fixed w-screen h-screen bg-black bg-opacity-90 top-0 left-0'>
-          <Image
-            className='animate-spin aspect-auto'
-            width={75}
-            height={75}
-            alt='loader'
-            quality={100}
-            priority={true}
-            loading='eager'
-            src={'/icons/loading.png'}>
-          </Image>
-        </div>
-      )}
-    </div>
+      {
+        saving && (
+          <div className='z-30 flex items-center justify-center fixed w-screen h-screen bg-black bg-opacity-90 top-0 left-0'>
+            <Image
+              className='animate-spin aspect-auto'
+              width={75}
+              height={75}
+              alt='loader'
+              quality={100}
+              priority={true}
+              loading='eager'
+              src={'/icons/loading.png'}>
+            </Image>
+          </div>
+        )
+      }
+    </div >
   )
 }
 
