@@ -1,12 +1,12 @@
 
 //links
-export const DISCORD_URL = 'https://discord.gg/NvC69Dwc';
+export const DISCORD_URL = 'https://discord.gg/DqbGMdKwBw';
 export const TWITTER_URL = 'https://twitter.com/EarlyArt_SOL';
 export const EXCHANGE_ART_URL = 'https://exchange.art/series/Kanohi%20Collective/nfts';
 export const TENSOR_URL = 'https://www.tensor.trade/trade/hidden_kanohi';
 
 
-//layer count pre group
+//layer count per group
 export const BackGroundCount = 22;
 export const BackGroundItemsCount = 8
 export const SkinsCount = 20;
@@ -25,7 +25,6 @@ export function generateLayerNames(layerGroup:string,layerCount:number):string[]
     }
     return res
 }
-
 
 //layer interface
 export interface layerGroup{

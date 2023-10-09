@@ -229,6 +229,18 @@ const Home = () => {
           <div className='overflow-hidden aspect-[3/1] w-[min(700px,80vw)] relative rounded-2xl'>
             <div className='w-full h-full relative overflow-hidden'>
 
+
+              {/**reset */}
+              <Image
+                onClick={resetLayerValuesToOriginal}
+                data-tooltip-id="my-tooltip"
+                data-tooltip-content="Reset Banner"
+                data-tooltip-place="top"
+                className={'z-[6] rounded-full bg-slate-700 p-1 bg-opacity-30 hover:scale-110 duration-100 cursor-pointer active:scale-100 absolute max-sm:scale-[0.75] max-sm:top-1 max-sm:right-1  right-4 top-4'}
+                width={35} height={35} alt='reset' src={'/icons/reset.png'}>
+
+              </Image>
+
               {/**change Loader */}
               <div
                 style={{
@@ -262,29 +274,9 @@ const Home = () => {
                 </Image>
               </div>
 
-              {/**reset */}
-              <Image
-                onClick={resetLayerValuesToOriginal}
-                data-tooltip-id="my-tooltip"
-                data-tooltip-content="Reset Banner"
-                data-tooltip-place="top"
-                className={'z-[6] rounded-full bg-slate-700 p-1 bg-opacity-30 hover:scale-110 duration-100 cursor-pointer active:scale-100 absolute max-sm:scale-[0.75] max-sm:top-1 max-sm:right-1  right-4 top-4'}
-                width={35} height={35} alt='reset' src={'/icons/reset.png'}>
-
-              </Image>
-
-
-              {/** banner text */}
-              <div className='sm:[font-size:var(--curr-font)] max-sm:[font-size:var(--curr-small-font)] absolute z-[4] w-[57%] h-full right-[5%] mr-[4%] flex items-center justify-center'
-              >
-                <p
-                  className=' duration-75 break-words w-full text-center text-yellow-50 road-rage mt-[5%]'
-                >{bannerText === '' ? ('Your Text Here') : (bannerText)}</p>
-              </div>
-
 
               {/**foreground avatar */}
-              <div className='absolute w-[35%] h-full z-[3] left-[10%] bottom-0'>
+              <div className='absolute w-[35%] h-full z-[4] left-[10%] bottom-0'>
                 {
                   !shouldScale.has(BackgroundItem) ? (
                     <Image className='absolute top-0 left-0'
@@ -334,6 +326,14 @@ const Home = () => {
                       }} fill={true} alt='eyes' src={Eyes}></Image>
                   )
                 }
+              </div>
+
+              {/** banner text */}
+              <div className='sm:[font-size:var(--curr-font)] max-sm:[font-size:var(--curr-small-font)] absolute z-[3] w-[57%] h-full right-[5%] mr-[4%] flex items-center justify-center'
+              >
+                <p
+                  className=' duration-75 break-words w-full text-center text-yellow-50 road-rage mt-[5%]'
+                >{bannerText === '' ? ('Your Text Here') : (bannerText)}</p>
               </div>
 
 
@@ -603,18 +603,12 @@ const Home = () => {
         </div>
 
         {/**Hidden Canvas */}
-        <div className='hidden-banner hidden'>
+        <div className='hidden-banner m-8'>
           <div className='overflow-hidden aspect-[3/1] w-[1500px] relative'>
-            {/** banner text */}
-            <div className='[font-size:var(--curr-big-font)] absolute z-[4] w-[50%] h-full right-0 mr-[5%] flex items-center justify-center'
-            >
-              <p
-                className=' duration-75 break-words w-full text-center text-yellow-50 road-rage mt-[5%]'
-              >{bannerText === '' ? ('Your Text Here') : (bannerText)}</p>
-            </div>
+
 
             {/**foreground avatar */}
-            <div className='absolute w-[35%] h-full z-[3] left-[10%] bottom-0'>
+            <div className='absolute w-[35%] h-full z-[4] left-[10%] bottom-0'>
               {
                 !shouldScale.has(BackgroundItem) ? (
                   <Image className='absolute top-0 left-0'
@@ -664,6 +658,14 @@ const Home = () => {
                     }} fill={true} alt='eyes' src={Eyes}></Image>
                 )
               }
+            </div>
+
+            {/** banner text */}
+            <div className='[font-size:var(--curr-big-font)] absolute z-[3] w-[57%] h-full right-[5%] mr-[4%] flex items-center justify-center'
+            >
+              <p
+                className=' duration-75 break-words w-full text-center text-yellow-50 road-rage mb-24'
+              >{bannerText === '' ? ('Your Text Here') : (bannerText)}</p>
             </div>
 
 
