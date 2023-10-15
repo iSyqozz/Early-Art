@@ -603,7 +603,7 @@ const Home = () => {
         </div>
 
         {/**Hidden Canvas */}
-        <div className='hidden-banner m-8'>
+        <div className='hidden m-4'>
           <div className='overflow-hidden aspect-[3/1] w-[1500px] relative'>
 
 
