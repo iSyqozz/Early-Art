@@ -20,6 +20,22 @@ const NavBar = () => {
         </Link>
 
         <div className="flex items-center sm:gap-16 gap-4 max-sm:text-sm justify-center font-bold">
+
+          <Link href="https://drip.haus/early"
+            className="relative after:absolute after:content-[''] after:h-[2.5px] after:bottom-[-3px] after:rounded-2xl after:w-0 after:left-0 hover:after:w-[75%] after:mt-[5px] after:bg-gradient-to-bl after:from-purple-400  after:via-indigo-400 after:to-indigo-800 after:hover:bg-indigo-600 
+          after:transition-all after:duration-200 after:ease-in
+          transition-all duration-200 ease-in hover:scale-105"
+          >
+            <Image className="!w-[80px] aspect-auto hover:scale-[1.07] duration-[0.1s]  "
+              width={120}
+              height={120}
+              alt="logo"
+              priority={true}
+              src={'/assets/drip.png'}
+              quality={100}
+            ></Image>
+          </Link>
+
           <Link
             className="relative after:absolute after:content-[''] after:h-[2.5px] after:bottom-[-3px] after:rounded-2xl after:w-0 after:left-0 hover:after:w-[75%] after:mt-[5px] after:bg-gradient-to-bl after:from-purple-400  after:via-indigo-400 after:to-indigo-800 after:hover:bg-indigo-600 
           after:transition-all after:duration-200 after:ease-in
@@ -34,13 +50,13 @@ const NavBar = () => {
             href={'/banner-tool'}>
             Banner Tool
           </Link>
+
+
         </div>
       </div>
 
-
       {/**small screen */}
       <div className="text-sm sm:hidden py-16 max-w-6xl mx-auto flex justify-between items-center relative">
-
 
         <Link
           className="ml-4 font-bold relative after:absolute after:content-[''] after:h-[2.5px] after:bottom-[-3px] after:rounded-2xl after:w-0 after:left-0 hover:after:w-[75%] after:mt-[5px] after:bg-gradient-to-bl after:from-purple-400  after:via-indigo-400 after:to-indigo-800 after:hover:bg-indigo-600 
@@ -68,6 +84,29 @@ const NavBar = () => {
           href={'/banner-tool'}>
           Banner Tool
         </Link>
+      </div>
+
+
+      {/**small screen */}
+      <div className="text-sm sm:hidden pb-10 -mt-6 max-w-6xl mx-auto flex justify-center items-center relative">
+
+        <Link href="https://drip.haus/early"
+          className="relative after:absolute after:content-[''] after:h-[2.5px] after:bottom-[-3px] after:rounded-2xl after:w-0 after:left-0 hover:after:w-[75%] after:mt-[5px] after:bg-gradient-to-bl after:from-purple-400  after:via-indigo-400 after:to-indigo-800 after:hover:bg-indigo-600 
+          after:transition-all after:duration-200 after:ease-in
+          transition-all duration-200 ease-in hover:scale-105"
+        >
+          <Image className="!w-[80px] aspect-auto hover:scale-[1.07] duration-[0.1s]  "
+            width={120}
+            height={120}
+            alt="logo"
+            priority={true}
+            src={'/assets/drip.png'}
+            quality={100}
+          ></Image>
+        </Link>
+
+
+
       </div>
 
 

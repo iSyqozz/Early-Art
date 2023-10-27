@@ -72,8 +72,6 @@ const Footer = () => {
           </Image>
         </Link>
       </div>
-
-
     </div>
 
 
