@@ -3,9 +3,9 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { Metadata } from 'next'
 
-export const metadata:Metadata = {
-  title:'Early | Home'
-} 
+export const metadata: Metadata = {
+  title: 'Early | Home'
+}
 
 const Home = () => {
   return (
@@ -39,17 +39,8 @@ const Home = () => {
             width={1500}
             height={1500}
             alt='designs'
-            src={'/assets/Splatter2.png'}
-            className='absolute top-0 left-0 aspect-auto'>
-          </Image>
-          <Image
-            quality={100}
-            priority={true}
-            width={1500}
-            height={1500}
-            alt='designs'
             src={'/assets/MainImage2.png'}
-            className='absolute top-0 left-0 aspect-auto'>
+            className='absolute top-0 left-0 aspect-auto min-[1000px]:scale-105'>
           </Image>
 
         </div>
